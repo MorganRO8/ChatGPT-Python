@@ -10,35 +10,35 @@ The ChatGPT Local Execution Plugin is a simple tool that allows users with ChatG
 
 To use the plugin, you will need the following:
 
-    ChatGPT plugin access
-    A Linux computer (haven't tried running on any other operating systems yet)
-    flask and flask-cors packages installed using pip
+   ChatGPT plugin access
+   A Linux computer (haven't tried running on any other operating systems yet)
+   flask and flask-cors packages installed using pip
 
 ## Installation and Setup
 
-    Clone the repository or download the source code.
-    Install the required packages by running the following command in your terminal:
+   Clone the repository or download the source code.
+   Install the required packages by running the following command in your terminal:
 
 
-$ pip install flask flask-cors
+    pip install flask flask-cors
 
-    Start the server by running the following command in your terminal:
+   Start the server by running the following command in your terminal:
 
-$ python app.py
+    python app.py
 
 ## Usage
 
-    Open your web browser and navigate to the ChatGPT interface.
-    Click on the "Plugins" section.
-    Scroll down to the "Plugin Store" and click on "Develop your own plugin."
-    In the provided field, type localhost:3333 and submit.
-    The plugin will now be installed and connected to your local environment, allowing you to execute Python commands directly in ChatGPT.
+   Open your web browser and navigate to the ChatGPT interface.
+   Click on the "Plugins" section.
+   Scroll down to the "Plugin Store" and click on "Develop your own plugin."
+   In the provided field, type localhost:3333 and submit.
+   The plugin will now be installed and connected to your local environment, allowing you to execute Python commands directly in ChatGPT.
 
 ## Why Use the Plugin?
 
 The ChatGPT Local Execution Plugin offers several advantages and possibilities, such as:
 
-    Generating code snippets: You can instruct ChatGPT to write code that performs specific tasks and execute it locally, ensuring it runs without errors.
-    Customization: If you have ideas for specific functions to add to the plugin, please let us know. We are open to feedback and feature requests.
+   Generating code snippets: You can instruct ChatGPT to write code that performs specific tasks and execute it locally, ensuring it runs without errors.
+   Customization: If you have ideas for specific functions to add to the plugin, please let us know. We are open to feedback and feature requests.
 
 We hope you enjoy using the ChatGPT Local Execution Plugin and have productive conversations with ChatGPT. Happy coding! :-)
