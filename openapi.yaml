@@ -1,0 +1,68 @@
+openapi: 3.0.1
+info:
+  title: Python Execution Plugin
+  description: A plugin that allows ChatGPT to execute Python code and create Python files on a local machine, using a virtual environment.
+  version: 'v1'
+servers:
+  - url: http://localhost:3333
+paths:
+  /execute:
+    post:
+      operationId: executeCode
+      summary: Execute Python code in a virtual environment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /create:
+    post:
+      operationId: createFile
+      summary: Create a Python file
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filename:
+                  type: string
+                code:
+                  type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /install:
+    post:
+      operationId: installPackage
+      summary: Install a Python package in the virtual environment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                package:
+                  type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+
