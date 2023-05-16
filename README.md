@@ -13,14 +13,17 @@ To use the plugin, you will need the following:
    ChatGPT plugin access
    A Linux computer (haven't tried running on any other operating systems yet)
    flask and flask-cors packages installed using pip
+   python3.10-venv
 
 ## Installation and Setup
 
    Clone the repository or download the source code.
-   Install the required packages by running the following command in your terminal:
+   Install the required packages by running the following commands in your terminal:
 
 
     pip install flask flask-cors
+    sudo apt install python3.10-venv
+    
 
    Start the server by running the following command in your terminal:
 
