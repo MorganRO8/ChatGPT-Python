@@ -1,19 +1,43 @@
 # ChatGPT-Python
 
 ![logo](https://github.com/MorganRO8/ChatGPT-Python/assets/47795945/549ecdb5-00d1-4702-a01d-9d2696445246)
-
 (logo made by using stable diffusion to combine the chatgpt and python logos, yes, it's silly.)
 
-A simple tool for those with chatgpt plugin access to allow for the local execution of code in a virtual environment.
+The ChatGPT Local Execution Plugin is a simple tool that allows users with ChatGPT plugin access to execute Python code locally in a virtual environment. This plugin enhances the capabilities of ChatGPT by enabling the execution of code directly within the chat interface.
 
-To use the plugin, you'll need chatgpt plugin access, a linux computer (I'm pretty sure at least), and the packages flask and flask-cors installed using pip.
+## Prerequisites
 
-Once you have those, open a terminal and run 'python app.py' to start the server. Then, in your browser, open up chatgpt, click plugins, scroll down to the plugin store, then click 'develop your own plugin'. In this field type localhost:3333 and submit, it should now install and connect to your local plugin, allowing python commands to be run directly by chatgpt.
+To use the plugin, you will need the following:
 
-Okay coo, but why?
+    ChatGPT plugin access
+    A Linux computer (haven't tried running on any other operating systems yet)
+    flask and flask-cors packages installed using pip
 
-This enables quite a few possibilities, but generally think along the lines of "Hey chatgpt, write code that does {this} and then execute that code locally, and make sure it doesn't run into errors" and boom, it'll do just that. 
+## Installation and Setup
 
-If you have any idea for more specific functions to add to the plugin, please, let me know!
+    Clone the repository or download the source code.
+    Install the required packages by running the following command in your terminal:
 
-Happy chatting :-)
+
+$ pip install flask flask-cors
+
+    Start the server by running the following command in your terminal:
+
+$ python app.py
+
+## Usage
+
+    Open your web browser and navigate to the ChatGPT interface.
+    Click on the "Plugins" section.
+    Scroll down to the "Plugin Store" and click on "Develop your own plugin."
+    In the provided field, type localhost:3333 and submit.
+    The plugin will now be installed and connected to your local environment, allowing you to execute Python commands directly in ChatGPT.
+
+## Why Use the Plugin?
+
+The ChatGPT Local Execution Plugin offers several advantages and possibilities, such as:
+
+    Generating code snippets: You can instruct ChatGPT to write code that performs specific tasks and execute it locally, ensuring it runs without errors.
+    Customization: If you have ideas for specific functions to add to the plugin, please let us know. We are open to feedback and feature requests.
+
+We hope you enjoy using the ChatGPT Local Execution Plugin and have productive conversations with ChatGPT. Happy coding! :-)
