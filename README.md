@@ -1,6 +1,7 @@
 # ChatGPT-Python
 
 ![logo](https://github.com/MorganRO8/ChatGPT-Python/assets/47795945/549ecdb5-00d1-4702-a01d-9d2696445246)
+
 (logo made by using stable diffusion to combine the chatgpt and python logos, yes, it's silly.)
 
 The ChatGPT Local Execution Plugin is a simple tool that allows users with ChatGPT plugin access to execute Python code locally in a virtual environment. This plugin enhances the capabilities of ChatGPT by enabling the execution of code directly within the chat interface.
