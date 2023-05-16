@@ -1,6 +1,7 @@
 # ChatGPT-Python
 
 ![logo](https://github.com/MorganRO8/ChatGPT-Python/assets/47795945/549ecdb5-00d1-4702-a01d-9d2696445246)
+
 (logo made by using stable diffusion to combine the chatgpt and python logos, yes, it's silly.)
 
 A simple tool for those with chatgpt plugin access to allow for the local execution of code in a virtual environment.
