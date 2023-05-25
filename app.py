@@ -3,13 +3,14 @@ from flask_cors import CORS
 import subprocess
 import os
 import venv
+import unittest
 
 # Create a virtual environment
 venv_dir = "./GPTvenv"
 venv.create(venv_dir, with_pip=True)
 
 app = Flask(__name__)
-CORS(app)  # This will enable CORS for all routes
+CORS(app) # This will enable CORS for all routes
 
 @app.route('/execute', methods=['POST'])
 def execute_code():
@@ -38,6 +39,18 @@ def install_package():
     result = subprocess.run([pip_exe, 'install', package], capture_output=True, text=True)
     return result.stdout or result.stderr
 
+@app.route('/api/run-unit-tests', methods=['POST'])
+def run_unit_tests():
+    file = request.json['file']
+    suite = unittest.TestLoader().loadTestsFromName(file)
+    result = unittest.TextTestRunner().run(suite)
+    return {
+        'total': result.testsRun,
+        'failures': len(result.failures),
+        'errors': len(result.errors),
+        'successes': result.testsRun - len(result.failures) - len(result.errors)
+    }
+
 @app.route('/.well-known/<path:filename>')
 def well_known(filename):
     return send_from_directory('.well-known', filename)
@@ -48,4 +61,3 @@ def root_files(filename):
 
 if __name__ == '__main__':
     app.run(port=3333)
-

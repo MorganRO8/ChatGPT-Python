@@ -1,68 +1,36 @@
 openapi: 3.0.1
 info:
-  title: Python Execution Plugin
-  description: A plugin that allows ChatGPT to execute Python code and create Python files on a local machine, using a virtual environment.
+  title: Python Execution Plugin Enhanced
+  description: A plugin that allows the user to execute Python code, create Python files, install Python packages, and run unit tests using ChatGPT.
   version: 'v1'
 servers:
   - url: http://localhost:3333
 paths:
-  /execute:
+  /api/execute-code:
     post:
       operationId: executeCode
-      summary: Execute Python code in a virtual environment
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                code:
-                  type: string
+      summary: Execute Python code
       responses:
         "200":
           description: OK
-          content:
-            text/plain:
-              schema:
-                type: string
-  /create:
+  /api/create-file:
     post:
       operationId: createFile
       summary: Create a Python file
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                filename:
-                  type: string
-                code:
-                  type: string
       responses:
         "200":
           description: OK
-          content:
-            text/plain:
-              schema:
-                type: string
-  /install:
+  /api/install-package:
     post:
       operationId: installPackage
-      summary: Install a Python package in the virtual environment
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                package:
-                  type: string
+      summary: Install a Python package
       responses:
         "200":
           description: OK
-          content:
-            text/plain:
-              schema:
-                type: string
-
+  /api/run-unit-tests:
+    post:
+      operationId: runUnitTests
+      summary: Run unit tests in a Python file
+      responses:
+        "200":
+          description: OK
