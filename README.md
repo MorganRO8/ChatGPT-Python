@@ -4,7 +4,7 @@
 
 (logo made by using stable diffusion to combine the chatgpt and python logos, yes, it's silly.)
 
-The ChatGPT Local Execution Plugin is a simple tool that allows users with ChatGPT plugin access to execute Python code locally in a virtual environment. This plugin enhances the capabilities of ChatGPT by enabling the execution of code directly within the chat interface.
+The ChatGPT Python Development Plugin is a tool that allows users with ChatGPT plugin access to execute Python code locally in a virtual environment, create Python files, install Python packages, and run unit tests. This plugin enhances the capabilities of ChatGPT by enabling the execution of code and unit tests directly within the chat interface.
 
 ## Prerequisites
 
@@ -42,6 +42,7 @@ To use the plugin, you will need the following:
 The ChatGPT Local Execution Plugin offers several advantages and possibilities, such as:
 
    Generating code snippets: You can instruct ChatGPT to write code that performs specific tasks and execute it locally, ensuring it runs without errors.
+   Running unit tests: You can instruct ChatGPT to run unit tests in a Python file and get the results directly in the chat interface.
    Customization: If you have ideas for specific functions to add to the plugin, please let us know. We are open to feedback and feature requests.
 
 We hope you enjoy using the ChatGPT Local Execution Plugin and have productive conversations with ChatGPT. Happy coding! :-)
