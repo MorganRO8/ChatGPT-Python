@@ -58,6 +58,8 @@ paths:
               properties:
                 package:
                   type: string
+                package_name:
+                  type: string
       responses:
         "200":
           description: OK
@@ -65,6 +67,7 @@ paths:
             text/plain:
               schema:
                 type: string
+
   /run-unit-tests:
     post:
       operationId: runUnitTests

@@ -24,8 +24,8 @@ def execute_code():
 @app.route('/create', methods=['POST'])
 def create_file():
     data = request.get_json()
-    filename = data['filename']
-    code = data['code']
+    filename = data.get('filename') or data.get('file_name')
+    code = data.get('code') or data.get('file_content')
     with open(filename, 'w') as f:
         f.write(code)
     return f'Successfully created {filename}'
@@ -33,7 +33,9 @@ def create_file():
 @app.route('/install', methods=['POST'])
 def install_package():
     data = request.get_json()
-    package = data['package']
+    package = data.get('package') or data.get('package_name')
+    if package is None:
+        return "No package provided", 400
     # Use the pip from the virtual environment
     pip_exe = os.path.join(venv_dir, 'bin', 'pip')
     result = subprocess.run([pip_exe, 'install', package], capture_output=True, text=True)
