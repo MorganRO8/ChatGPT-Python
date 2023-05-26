@@ -39,7 +39,7 @@ def install_package():
     result = subprocess.run([pip_exe, 'install', package], capture_output=True, text=True)
     return result.stdout or result.stderr
 
-@app.route('/api/run-unit-tests', methods=['POST'])
+@app.route('/run-unit-tests', methods=['POST'])
 def run_unit_tests():
     file = request.json['file']
     suite = unittest.TestLoader().loadTestsFromName(file)

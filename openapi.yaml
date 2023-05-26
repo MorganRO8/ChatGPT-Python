@@ -6,31 +6,82 @@ info:
 servers:
   - url: http://localhost:3333
 paths:
-  /api/execute-code:
+  /execute:
     post:
       operationId: executeCode
       summary: Execute Python code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
       responses:
         "200":
           description: OK
-  /api/create-file:
+          content:
+            text/plain:
+              schema:
+                type: string
+  /create:
     post:
       operationId: createFile
       summary: Create a Python file
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filename:
+                  type: string
+                code:
+                  type: string
       responses:
         "200":
           description: OK
-  /api/install-package:
+          content:
+            text/plain:
+              schema:
+                type: string
+  /install:
     post:
       operationId: installPackage
       summary: Install a Python package
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                package:
+                  type: string
       responses:
         "200":
           description: OK
-  /api/run-unit-tests:
+          content:
+            text/plain:
+              schema:
+                type: string
+  /run-unit-tests:
     post:
       operationId: runUnitTests
       summary: Run unit tests in a Python file
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filename:
+                  type: string
       responses:
         "200":
           description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+
